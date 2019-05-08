@@ -55,7 +55,7 @@ void add(char data) {
 
 void display() {
 	Tree *displayNode = rootPtr;
-	
+
 	// display the root node
 	std::cout << "  " << displayNode->data << std::endl;
 	// display the next left node

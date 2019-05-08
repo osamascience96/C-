@@ -96,7 +96,7 @@ void GetNodeCountAtLevel(int lvl)
 	else
 	{
 		std::cout << pow(2, lvl - 1) << std::endl;
-	} 
+	}
 }
 
 void GetNodeCoutOfTree(int lvl)
