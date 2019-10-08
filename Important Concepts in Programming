@@ -1,0 +1,2 @@
+explicit keyword is used with the constructor to avoid the implict declaration/conversion.
+const keyword with functions is used to avoid changes in the object, where it is called.
