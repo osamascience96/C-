@@ -15,6 +15,7 @@ struct Tree {
 void add(double data);
 void GetNodeCountAtLevel(int lvl);
 void GetNodeCoutOfTree(int lvl);
+int getHeight(Node *node);
 
 
 
@@ -108,6 +109,21 @@ void GetNodeCoutOfTree(int lvl)
 	{
 		std::cout << pow(2, lvl) - 1;
 	}
+}
+
+// Not an efficient code
+// Objective: to find the path of maximum edges to leaf. Reference HackerRank
+int getHeight(Node* root) {
+		//Write your code here
+		if (root == nullptr) {
+			return  -1;
+		}
+
+		int left = getHeight(root->left);
+		int right = getHeight(root->right);
+		cout << left << " " << right << endl;
+
+		return (left > right ? left : right) + 1;
 }
 
 
