@@ -65,7 +65,7 @@ int main() {
 		cin >> data;
 		root = myTree.insert(root, data);
 	}
-	int height = myTree.getHeight(root);
+	int height = myTree.getHeight(root) - 1;
 	cout << height;
 
 	return 0;
