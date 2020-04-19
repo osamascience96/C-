@@ -6,8 +6,8 @@ int main(void) {
 	scanf("%i", &x);
 	printf("x: %i\n", x);*/
 
-	char s[6];
-	printf("C: ");
+	char s[5];
+	printf("S: ");
 	scanf("%s", s);
-	printf("C: %s\n", s);
+	printf("%s\n", s);
 }
