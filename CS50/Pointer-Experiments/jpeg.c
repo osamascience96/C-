@@ -2,7 +2,7 @@
 #include<stdio.h>
 
 int main(int argc, char *argv[]) {
-	//printf("%i==>%s", argc, argv[1]);
+	//printf("%i==>%s\n", argc, argv[1]);
 
 	// if the program not provides 2 arguments
 	if (argc != 2) {
