@@ -1,14 +1,19 @@
 #include "pch.h"
 #include <iostream>
-#include"Recursion.h"
+#include"Hanoi.h"
 
 int sum(int);
 
 int main()
 {
-	Recursion *recursiveObj = new Recursion();
+	// Call of the 1st program
+	/*Recursion *recursiveObj = new Recursion();
 
 	int k = recursiveObj->recursiveSum(10);
-	std::cout << k << std::endl;
+	std::cout << k << std::endl;*/
+
+	// Call of the 2nd Tower of Hanoi Program
+	Hanoi *hanoiObj = new Hanoi();
+	hanoiObj->TowerOfHanoiFunction(3, 'a', 'b', 'c');
 	return 0;
 }
