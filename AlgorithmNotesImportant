@@ -1,0 +1,13 @@
+Important formulas to understand....
+
+Space Complexity s(p) = c + s(instance characteristics)
+Time Complexity of Loop(N) = Number of Primitive Operations * N | N is the number of iterations of the loop
+
+Important Steps to be in sequence to be performed to measure the time complexity of an algorithm........
+
+1)Measure Input Size
+2)Type of Operations
+3)Type of Complexity of the Algorithm
+4)We define the Asymptotics of an algorithm based on the input size and selected complexity.
+5)We define the Complexity Class of that function we made in step 4 to measure the final complexity of an algorithm...
+
