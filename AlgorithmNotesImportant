@@ -4,6 +4,9 @@ Space Complexity s(p) = c + s(instance characteristics)
 Time Complexity of Loop(N) = Number of Primitive Operations * N | N is the number of iterations of the loop
 
 Important Steps to be in sequence to be performed to measure the time complexity of an algorithm........
+If we increase the level of space complexity to the instance, where our proposed algorithm can work, then we can easily overcome with the space complexity.
+About the time complexity, scientists are researching to overcome with this time domain of the algorithm, but for the trivial solution in this situation, by changing the algorithm to achieve our target, we can somehow overcome with the time domain problems.
+
 
 1)Measure Input Size
 2)Type of Operations
