@@ -14,3 +14,8 @@ About the time complexity, scientists are researching to overcome with this time
 4)We define the Asymptotics of an algorithm based on the input size and selected complexity.
 5)We define the Complexity Class of that function we made in step 4 to measure the final complexity of an algorithm...
 
+As the size of the input increases, the running time also increases.
+
+when calculating the equation, all the co-officients and constants are ignored in the final results.
+
+Note: It is tricky to calculate the average case of an algorithm, so we define the function bounds that describes the relation between differnt running time of the algorithms as per the size of the input increases
