@@ -8,6 +8,7 @@ If we increase the level of space complexity to the instance, where our proposed
 About the time complexity, scientists are researching to overcome with this time domain of the algorithm, but for the trivial solution in this situation, by changing the algorithm to achieve our target, we can somehow overcome with the time domain problems.
 
 
+Step to measure the time complexity of an algorithm
 1)Measure Input Size
 2)Type of Operations
 3)Type of Complexity of the Algorithm
@@ -19,3 +20,15 @@ As the size of the input increases, the running time also increases.
 when calculating the equation, all the co-officients and constants are ignored in the final results.
 
 Note: It is tricky to calculate the average case of an algorithm, so we define the function bounds that describes the relation between differnt running time of the algorithms as per the size of the input increases
+
+Now, how do we measure the time complexity of any algorithm?
+1)Should be measure the execution time of the algorithm?
+  No, becasue the execution time may differ from architecture to architecture....
+2)Should we count the number of statements in the code?
+  No, because number of program statements may vary from one programming language to another programming language.
+  And because this thing can also be dependent upon the style of writing program from one person to another.
+
+Answer:
+       We should measure the running time of the algorithm by calculating the f(n) wrt input size of an algorithm using the asypmtotic notations. And this broughts us to our first step of time complexity.
+
+     
