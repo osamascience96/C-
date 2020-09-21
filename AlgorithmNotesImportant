@@ -31,4 +31,18 @@ Now, how do we measure the time complexity of any algorithm?
 Answer:
        We should measure the running time of the algorithm by calculating the f(n) wrt input size of an algorithm using the asypmtotic notations. And this broughts us to our first step of time complexity.
 
-     
+Relationship b/w Rate of Growth and Asymptotics
+	It is the process which uses the rate of growth as the measurement to compare the functions of different algorithms.
+	
+	Let f(x) = n and g(x) = n^2
+	So, from the above two functions, we came to know that g(x) > f(x), and also f(x) is faster than g(x), becasue it solves the problem in linear time.
+	
+Note: In any function domain, there could be lower order terms in the higher order function domain.
+	Ex: let g(x) be n^2 and the rate of growth is n+10, so for this function rate of growth n is the higher order term and but for the domain of the function g(x), it is the lower order term
+	
+So, the steps are simple to reach up to asymptotic notation level to evaluate the good algorithm
+1)Write Algorithm.
+2)Assign Cost.
+3)Make general equation.
+4)Find rate of growth.
+***) For asymptotic notation, we need minimumly 2 algorithms to compare the time complexity using rate of growth through asymptotics notation.   
