@@ -58,3 +58,10 @@ Note:
  Theta Notation is asymtotically equality
 	We know that f(n) = Theta(g(n)) so, f(n) is at most close to g(n)
  
+ Importants points of Big Oh
+  1) k or n. are the values, that represents the points where both c and k meets, from where the rate of growth starts.
+  2) In the definition, c is the value with c*g(n) where the point meets to differentiate the the algorithm i-e g(n) from f(n)
+  3) There will be some of the cases where the meeting points of the both the function does not meets and then that is no longer the case of Big-O, that is the case of Small-O.
+  4) f is o(g) until the values of the k and c exists to satesfy the equation of Big Oh.
+  5) The values of k and c, if larger are also applicable, and in some cases it is best if we do not look up to the smallest values that may approaches to 0, should be find.
+   
