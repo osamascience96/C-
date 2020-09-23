@@ -50,3 +50,11 @@ So, the steps are simple to reach up to asymptotic notation level to evaluate th
 Note:
      So, when we receive the selection statements in the program, then we use the maximum function to identify that which block either true or false contains the highest rate of growth, and that will be its complexity.
 
+ General Conceptual Definitions for Asymptotic Notations:
+ Big-O Notation is less than aymptotic and implies of upperbound
+ 	We Know that f(n) = O(g(n)) so, f(n) <= g(n)
+ Big Omega Notation is greater than asymptotic and implies of lower bound
+	We know that f(n) = Big-Omega(g(n)) so, f(n) >= g(n)
+ Theta Notation is asymtotically equality
+	We know that f(n) = Theta(g(n)) so, f(n) is at most close to g(n)
+ 
