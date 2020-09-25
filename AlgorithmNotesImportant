@@ -65,3 +65,7 @@ Note:
   4) f is o(g) until the values of the k and c exists to satesfy the equation of Big Oh.
   5) The values of k and c, if larger are also applicable, and in some cases it is best if we do not look up to the smallest values that may approaches to 0, should be find.
    
+  Important Point:
+	Common Rate of Growth order of magnitude:
+	log(n) <= n <= n(log(n)) <= n^2 <= n^3 <= 2^n
+  
