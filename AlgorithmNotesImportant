@@ -69,3 +69,50 @@ Note:
 	Common Rate of Growth order of magnitude:
 	log(n) <= n <= n(log(n)) <= n^2 <= n^3 <= 2^n
   
+  Order of Growth in Expressions:
+   1) O(f) can be used as a term in an arithmatic expressions
+      Ex:x^2+x+1 as x^2 + O(x) OR x^2 + some function that is O(x)
+   We use this when we do not need to find the time complexity of whole expression, instead you want to find that of the specific term only.
+   Note: It is suitable in some of the cases only.
+   
+   
+   Example of a Selection Statement:
+   	if(condition){
+	   for(i=0; i < n; i++){
+		statement
+	   }
+	}else{
+	   Statement
+	}   
+
+   In the above example, we can do the following:
+	let the condition 1 be g and condition 2 be h
+	g belongs to O(f1) and h belongs to O(f2)
+	Note:as both are the part of the program, so
+	g+h belongs to O(f1 + f2)
+	Figuring out the time complexity 
+	O(max(f1, f2))
+	The maximum function will return the functon that has the greater time complexity, as of it is applied to the upperbound Asymptotics.
+	O(max(O(n), O(1))) = O(n) is the time complexity of the given code.
+   
+   ============================================================================================================================================
+
+   Example of Nested Loop Statement:
+	for(condition):
+	   for(condition):
+		statements...
+
+   let g be the outer loop and h be the inner loop,
+   g belongs to O(f) and h belongs to O(f), then g*h belongs to O(f)
+   That is:
+ 	O(f) = n^2
+   ===========================================================================================================================================
+
+   Let there be 3 different written consecutive code blocks in a Progam.
+	let the time complexity of f(n) = n, g(n) = n^2 and h(n) = n^3
+	If f belongs to O(g) and g belongs to O(h) ---> f belongs to O(h)
+	then, this situation can be represented in this way:
+		f(n) <= g(n) <= h(n)
+		f(n) <= h(n)
+  
+   =========================================================================================================================================== 
