@@ -1,0 +1,76 @@
+Important formulas to understand....
+
+Space Complexity s(p) = c + s(instance characteristics)
+Time Complexity of Loop(N) = Number of Primitive Operations * N | N is the number of iterations of the loop
+
+Important Steps to be in sequence to be performed to measure the time complexity of an algorithm........
+If we increase the level of space complexity to the instance, where our proposed algorithm can work, then we can easily overcome with the space complexity.
+About the time complexity, scientists are researching to overcome with this time domain of the algorithm, but for the trivial solution in this situation, by changing the algorithm to achieve our target, we can somehow overcome with the time domain problems.
+
+
+Step to measure the time complexity of an algorithm
+1)Measure Input Size
+2)Type of Operations
+3)Type of Complexity of the Algorithm
+4)We define the Asymptotics of an algorithm based on the input size and selected complexity.
+5)We define the Complexity Class of that function we made in step 4 to measure the final complexity of an algorithm...
+
+As the size of the input increases, the running time also increases.
+
+when calculating the equation, all the co-officients and constants are ignored in the final results.
+
+Note: It is tricky to calculate the average case of an algorithm, so we define the function bounds that describes the relation between differnt running time of the algorithms as per the size of the input increases
+
+Now, how do we measure the time complexity of any algorithm?
+1)Should be measure the execution time of the algorithm?
+  No, becasue the execution time may differ from architecture to architecture....
+2)Should we count the number of statements in the code?
+  No, because number of program statements may vary from one programming language to another programming language.
+  And because this thing can also be dependent upon the style of writing program from one person to another.
+
+Answer:
+       We should measure the running time of the algorithm by calculating the f(n) wrt input size of an algorithm using the asypmtotic notations. And this broughts us to our first step of time complexity.
+
+Relationship b/w Rate of Growth and Asymptotics
+	It is the process which uses the rate of growth as the measurement to compare the functions of different algorithms.
+	
+	Let f(x) = n and g(x) = n^2
+	So, from the above two functions, we came to know that g(x) > f(x), and also f(x) is faster than g(x), becasue it solves the problem in linear time.
+	
+Note: In any function domain, there could be lower order terms in the higher order function domain.
+	Ex: let g(x) be n^2 and the rate of growth is n+10, so for this function rate of growth n is the higher order term and but for the domain of the function g(x), it is the lower order term
+	
+So, the steps are simple to reach up to asymptotic notation level to evaluate the good algorithm
+1)Write Algorithm.
+2)Assign Cost.
+3)Make general equation.
+4)Find rate of growth.
+***) For asymptotic notation, we need minimumly 2 algorithms to compare the time complexity using rate of growth through asymptotics notation.   
+
+Note:
+     So, when we receive the selection statements in the program, then we use the maximum function to identify that which block either true or false contains the highest rate of growth, and that will be its complexity.
+
+ General Conceptual Definitions for Asymptotic Notations:
+ Big-O Notation is less than aymptotic and implies of upperbound
+ 	We Know that f(n) = O(g(n)) so, f(n) <= g(n)
+ Big Omega Notation is greater than asymptotic and implies of lower bound
+	We know that f(n) = Big-Omega(g(n)) so, f(n) >= g(n)
+ Theta Notation is asymtotically equality
+	We know that f(n) = Theta(g(n)) so, f(n) is at most close to g(n)
+ 
+ Importants points of Big Oh
+  1) k or n. are the values, that represents the points where both c and k meets, from where the rate of growth starts.
+  2) In the definition, c is the value with c*g(n) where the point meets to differentiate the the algorithm i-e g(n) from f(n)
+  3) There will be some of the cases where the meeting points of the both the function does not meets and then that is no longer the case of Big-O, that is the case of Small-O.
+  4) f is o(g) until the values of the k and c exists to satesfy the equation of Big Oh.
+  5) The values of k and c, if larger are also applicable, and in some cases it is best if we do not look up to the smallest values that may approaches to 0, should be find.
+   
+  Important Point:
+	Common Rate of Growth order of magnitude:
+	log(n) <= n <= n(log(n)) <= n^2 <= n^3 <= 2^n
+  
+  Order of growth in expression
+  1) O(f) can be used as a term or to be more precise as a part of any algebric expressions.
+  Ex: x^2 + x + 1 as x^2 + O(x), we can also say this that x^2 plus some function that is O(x) to be more general
+  From this technique we can find the time complexity (upper or lower bound) of the part of the expression, where in need we want to see the partial result of the algorithm
+  
