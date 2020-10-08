@@ -116,3 +116,30 @@ Note:
 		f(n) <= h(n)
   
    =========================================================================================================================================== 
+   
+Analyzing the Recursive Algorithm
+Check to see if the problem is small enough to solve directly.
+If the problem is not as it seems in step 1, then divide the problem into smaller pieces.
+Call the function on the samller sets of data and form the partial solutions that leads to the whole and complete solution.
+Now combine all the solutions to form the final and complete solutions.
+
+General Definition to Analyze any of the Algorithm of the Recursion
+	
+                          ----
+                          -  a		if base case
+		f(n) =    -   
+                          -
+                          -
+                          -
+                          -  b * f(n) + c   recursion case
+                          -
+                          ----
+
+      It is to remembered that we can have more than one base case and can have more than one recursions in the equation and more recursion cases as well
+  
+   Cost of the Recursion Algorithm:
+	The cost of the recursion algorithm is being shown in the above general definition of the recursion 
+		where a is the cost of the base case and will be the cost of all the base cases a1 + a2 + a3 + a4 + .. + an
+		where b is the cost of all the backtracks calls that occur in the memory and the returning of all the values from those backtracks
+		where c is the cost of all the operations that are outside of the recursion and contains other operations.
+	
