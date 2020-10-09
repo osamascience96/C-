@@ -143,3 +143,46 @@ General Definition to Analyze any of the Algorithm of the Recursion
 		where b is the cost of all the backtracks calls that occur in the memory and the returning of all the values from those backtracks
 		where c is the cost of all the operations that are outside of the recursion and contains other operations.
 	
+   Some Important and usefull Mathematical Equations.
+   
+   Arithmetic Sequence ==> Common difference between consecutive terms.
+   Examples includes the set of natural, even or set of any tables etc.
+   
+   General Form: an = a1 + (n-1)d
+         an is the nth term
+	 a1 is the first term
+	 n-1 is the previous term number
+         d is the difference
+   Sum of n terms of the Arithmatic Sequence
+	 Sn = n/2(a1+an)
+   
+
+   Geometric Progressions is the set of series that produces successive numbers by a common ratio, where each next number is the product of the difference to the previous term
+	General Form Representation ==> an = a1r^n-1
+	Sum of N terms of Geometric Sequence = Sn = [a1(r^n - 1)] / r-1
+	where r is the common ratio
+   
+   Sigma Notations
+	
+	B
+	_____
+	=
+	=
+	=  an
+	=
+	=____
+	n = A
+	
+	where B is the upper bound or you can say the final term 
+        where n = A is the lower bound or you can say the initial term
+	an is the nth term
+	And the sigma sign referes to the sum of terms.
+	
+	Note: We can form the series from the given sigma notation data or vise versa
+	      When we see the final position B reaching to the infinite, then there are 2 cases, where the sum is possible, 
+	      
+	      if the difference in the geometric profession difference to less than 1, then we use the formula in case of geometric progression
+		
+		S =  a1
+  	           -------
+		    1 - r
