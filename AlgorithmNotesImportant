@@ -186,3 +186,13 @@ General Definition to Analyze any of the Algorithm of the Recursion
 		S =  a1
   	           -------
 		    1 - r
+
+	===========================================================================================================================================
+    
+   	Mathematical Induction Points 
+	Let P(n) be a predicate defined from Integers n.
+		Two Basic Steps:
+		    P(a) is true from some fixed a belongs to Z
+		Inductive Step: For all integers, k >= a,
+		    if P(k) is true, then P(k+1) is true
+	     Then for all integers n >= a, P(n) is true
