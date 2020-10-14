@@ -181,7 +181,7 @@ General Definition to Analyze any of the Algorithm of the Recursion
 	Note: We can form the series from the given sigma notation data or vise versa
 	      When we see the final position B reaching to the infinite, then there are 2 cases, where the sum is possible, 
 	      
-	      if the difference in the geometric profession difference to less than 1, then we use the formula in case of geometric progression
+	      if the difference in the geometric progession difference to less than 1, then we use the formula in case of geometric progression
 		
 		S =  a1
   	           -------
@@ -196,3 +196,20 @@ General Definition to Analyze any of the Algorithm of the Recursion
 		Inductive Step: For all integers, k >= a,
 		    if P(k) is true, then P(k+1) is true
 	     Then for all integers n >= a, P(n) is true
+	============================================================================================================================================
+
+	Solving Recurrance Relation
+	Basic Steps:
+	   1) Expand the Recurrance
+	   2) Sum up the expansion of the recurrance
+	   3) Evaluate the pattern at each backtracking steps.
+	
+	Solving through Iteration Method:
+	   1)Iterate the recurrance(break down the problem) until the initial condition is reached.
+	   2)Back Substitution to express the recurrance in terms of n and initial condition.
+	
+	General Equations we can refer:
+	   T(n) = c+c+c+.....+c+T(1) ==> log(n)
+	   T(n) = k(n) + harmonic series of backtracking(2**k) + T(1) ==> nlog(n)
+	
+	
