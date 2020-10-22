@@ -1,0 +1,31 @@
+Note:- Each Subtree are disjoints from each other subtree.
+
+Degree of Node: Any Node that contains n number of nodes as its desendants. This could be the degree of any Node i-e Root or SubNode(that could also be Subtree)
+
+Degree of Tree: A degree of the tree is that node in the tree that has the highest degree.
+
+Leaf/Terminal Node: The Node with the degree 0.
+
+Level: Each Node is assigned a level number. Each descendant node has the (l+1) level from its ancestors nodes, where l is the level of the node(ancestor).
+
+Generation: Nodes that belongs to the same level belongs to the same generation.
+
+Height/Depth: The longest branch in the tree OR The branch with most number reached levels in the tree is the Height/Depth of the tree.
+
+Edge: Line drawn between any 2 nodes in the tree OR any line connecting two nodes in the tree is the edge.
+      Note: The direction of the edge any tree is from top to bottom only.
+
+Path: Sequence of consecutive edges.
+
+Branch: Path ending on a leaf node.
+
+Note: Branch can contain many paths, a branch can also be refered to as a path.
+
+Binary Tree:- A tree that has its 2 desendants in every node it it is the binary tree.
+Binary Tree can be represented in both arrays and linkedlist using the pointer structure.
+	Node Structure:
+		Data
+	Left Ptr    Right Ptr
+
+
+
