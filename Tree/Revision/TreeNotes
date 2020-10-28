@@ -29,3 +29,14 @@ Binary Tree can be represented in both arrays and linkedlist using the pointer s
 
 
 
+There are 3 types of traversals in the tree:
+
+	1) PreOrder Traversal
+	2) InOrder Traversal
+	3) PostOrder Traversal
+
+In Preorder Traversal, we process the root, leftNode, rightNode.
+In InOrder Traversal, we process the leftNode, root, rightNode.
+In PostOrder Traversal, we process the leftNode, rightNode and root.
+
+

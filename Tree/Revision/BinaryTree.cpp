@@ -16,6 +16,8 @@ Node *startNode = nullptr;
 
 void addNode(int);
 void pre_order(Node*);
+void in_order(Node*);
+void post_order(Node*);
 
 int main() {
 	addNode(10);
@@ -27,6 +29,12 @@ int main() {
 
 	// traversing in pre order manner
 	pre_order(startNode);
+	std::cout << "\n";
+	//traversing in in order manner
+	in_order(startNode);
+	std::cout << "\n";
+	// traversing in post order manner
+	post_order(startNode);
 	return 0;
 }
 
@@ -62,5 +70,21 @@ void pre_order(Node *root) {
 		pre_order(root->leftNode);
 		// recursive to the right of the node
 		pre_order(root->rightNode);
+	}
+}
+
+void in_order(Node *root) {
+	if (root != nullptr) {
+		in_order(root->leftNode);
+		std::cout << root->data << " ";
+		in_order(root->rightNode);
+	}
+}
+
+void post_order(Node *root) {
+	if (root != nullptr) {
+		post_order(root->leftNode);
+		post_order(root->rightNode);
+		std::cout << root->data << " ";
 	}
 }
