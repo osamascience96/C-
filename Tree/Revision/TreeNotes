@@ -40,3 +40,6 @@ In InOrder Traversal, we process the leftNode, root, rightNode.
 In PostOrder Traversal, we process the leftNode, rightNode and root.
 
 
+Level Order Traversal:
+We do level order traversal by processing all the nodes on each level from top to bottom approach by using the queue datastructure, that can be used to store the nodes of the current level node(s) that process the root first, then after that process the leftnode and rightnode
+
