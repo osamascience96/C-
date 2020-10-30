@@ -43,3 +43,12 @@ In PostOrder Traversal, we process the leftNode, rightNode and root.
 Level Order Traversal:
 We do level order traversal by processing all the nodes on each level from top to bottom approach by using the queue datastructure, that can be used to store the nodes of the current level node(s) that process the root first, then after that process the leftnode and rightnode
 
+Binary Search Tree:
+	In BST, the nodes are traversed and inserted according to one rules:
+		If the number to be inserted or find, is smaller than the root node, then go to the left subtree
+		If the number to be inserted or find, is greater then the root node, then go to the right subtree
+	
+	The finding element is used while finding, inserting and deleting operations in the BST.
+
+	
+
