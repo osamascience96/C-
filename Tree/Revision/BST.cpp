@@ -1,6 +1,3 @@
-// binary search tree program and operations 
-
-
 #include <iostream>
 
 struct Node {
@@ -18,27 +15,84 @@ struct Node {
 Node *binarySearchTree = nullptr;
 
 void InsertNode(int data);
+Node* FindMaxNode(Node*);
+Node* DeleteNode(Node*, int);
 Node* FindNode(Node *rootNode, int no_to_find);
 
 int main() {
-	// sampling the Node addition 
-	binarySearchTree = new Node();
-	binarySearchTree->data = 25;
-	binarySearchTree->leftNode = new Node();
-	binarySearchTree->leftNode->data = 15;
-	binarySearchTree->rightNode = new Node();
-	binarySearchTree->rightNode->data = 35;
-	binarySearchTree->leftNode->leftNode = new Node();
-	binarySearchTree->leftNode->leftNode->data = 5;
-	binarySearchTree->leftNode->rightNode = new Node();
-	binarySearchTree->leftNode->rightNode->data = 16;
-	binarySearchTree->rightNode->leftNode = new Node();
-	binarySearchTree->rightNode->leftNode->data = 30;
-	binarySearchTree->rightNode->rightNode = new Node();
-	binarySearchTree->rightNode->rightNode->data = 45;
+	InsertNode(4);
+	InsertNode(2);
+	InsertNode(1);
+	InsertNode(8);
+	InsertNode(5);
+	InsertNode(9);
+	InsertNode(7);
+	InsertNode(6);
 
-	InsertNode(3);
+	DeleteNode(binarySearchTree, 8);
 	return 0;
+}
+
+Node* FindMaxNode(Node *rootNode) {
+	Node *tempNode = rootNode;
+	while (tempNode->rightNode != nullptr) {
+		tempNode = tempNode->rightNode;
+	}
+
+	return tempNode;
+}
+
+Node* DeleteNode(Node *rootNode, int data) {
+	if (rootNode == nullptr) {
+		return nullptr;
+	}
+	else if(data < rootNode->data) {
+		// if the data is shorter than that of the root data
+		rootNode->leftNode = DeleteNode(rootNode->leftNode, data);
+	}
+	else if (data > rootNode->data) {
+		// if the data is greater than that of the root data
+		rootNode->rightNode = DeleteNode(rootNode->rightNode, data);
+	}
+	else {
+		Node *tempNode = nullptr;
+		if (rootNode->leftNode != nullptr && rootNode->rightNode != nullptr) {
+			// Case1: if the node to be deleted has a non linear branch on its denendants
+			/*The Code of case 1 is a non-practical solution, the practical solution is mentioned in the tree notes, that is simple and standard to implement.*/
+			Node *maxNode = FindMaxNode(rootNode->leftNode);
+			rootNode->data = maxNode->data;
+			tempNode = rootNode->leftNode;
+			Node *prevNode = tempNode;
+
+			while (tempNode->rightNode != nullptr) {
+				prevNode = tempNode;
+				tempNode = tempNode->rightNode;
+			}
+
+			prevNode->rightNode = DeleteNode(tempNode, maxNode->data);
+			
+			// release memory
+			prevNode = nullptr;
+			maxNode = nullptr;
+			delete(prevNode);
+			delete(maxNode);
+
+		}else if ((rootNode->leftNode != nullptr && rootNode->rightNode == nullptr) || (rootNode->leftNode == nullptr && rootNode->rightNode != nullptr)) {
+			// Case2: if the node to be deleted has a linear branch on its desendants
+			if (rootNode->leftNode == nullptr) {
+				rootNode = rootNode->rightNode;
+			}
+			else if (rootNode->rightNode == nullptr) {
+				rootNode = rootNode->leftNode;
+			}
+		} else if (rootNode->leftNode == nullptr && rootNode->rightNode == nullptr) {
+			// Case3: if the node to be deleted is a leaf
+			delete(rootNode);
+			rootNode = nullptr;
+		}
+	}
+	// return the root Node
+	return rootNode;
 }
 
 void InsertNode(int data) {

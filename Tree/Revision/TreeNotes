@@ -49,6 +49,22 @@ Binary Search Tree:
 		If the number to be inserted or find, is greater then the root node, then go to the right subtree
 	
 	The finding element is used while finding, inserting and deleting operations in the BST.
-
 	
 
+	While deleting the nodes in the binary tree, there are 3 cases:
+		*) The node to be deleted can be a leaf
+		*) The node to be deleted can be a linear branch, having only one desendant.
+		*) The node to be deleted can be non-linear branch, have multiple desendants.
+
+	
+	When we delete a node that has 2 desendants to be confirmed, the following solutions.
+		1) Non-Practical Solution:
+			*)Traverse to left side of the root node
+			*)Find the maximum node on that branch
+			*)shift the data on to the root node
+			*)Delete the Node that was found maximum on that branch
+		2) Practical Solution:
+			Either works on 2 practical solutions
+			*) Fuck(Delete) the Node and all its branches(subtrees)	
+			*) Return the null pointer if this shit(Node with 2 desendants) happens.
+	
