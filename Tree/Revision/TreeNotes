@@ -1,0 +1,123 @@
+Note:- Each Subtree are disjoints from each other subtree.
+
+Degree of Node: Any Node that contains n number of nodes as its desendants. This could be the degree of any Node i-e Root or SubNode(that could also be Subtree)
+
+Degree of Tree: A degree of the tree is that node in the tree that has the highest degree.
+
+Leaf/Terminal Node: The Node with the degree 0.
+
+Level: Each Node is assigned a level number. Each descendant node has the (l+1) level from its ancestors nodes, where l is the level of the node(ancestor).
+
+Generation: Nodes that belongs to the same level belongs to the same generation.
+
+Height/Depth: The longest branch in the tree OR The branch with most number of reached levels in the tree is the Height/Depth of the tree.
+
+Edge: Line drawn between any 2 nodes in the tree OR any line connecting two nodes in the tree is the edge.
+      Note: The direction of the edge any tree is from top to bottom only.
+
+Path: Sequence of consecutive edges.
+
+Branch: Path ending on a leaf node.
+
+Note: Branch can contain many paths, a branch can also be refered to as a path.
+
+Binary Tree:- A tree that has its 2 desendants in every node it it is the binary tree.
+Binary Tree can be represented in both arrays and linkedlist using the pointer structure.
+	Node Structure:
+		Data
+	Left Ptr    Right Ptr
+
+
+
+There are 3 types of traversals in the tree:
+
+	1) PreOrder Traversal
+	2) InOrder Traversal
+	3) PostOrder Traversal
+
+In Preorder Traversal, we process the root, leftNode, rightNode.
+In InOrder Traversal, we process the leftNode, root, rightNode.
+In PostOrder Traversal, we process the leftNode, rightNode and root.
+
+
+Level Order Traversal:
+We do level order traversal by processing all the nodes on each level from top to bottom approach by using the queue datastructure, that can be used to store the nodes of the current level node(s) that process the root first, then after that process the leftnode and rightnode
+
+Binary Search Tree:
+	In BST, the nodes are traversed and inserted according to one rules:
+		If the number to be inserted or find, is smaller than the root node, then go to the left subtree
+		If the number to be inserted or find, is greater then the root node, then go to the right subtree
+	
+	The finding element is used while finding, inserting and deleting operations in the BST.
+	
+
+	While deleting the nodes in the binary tree, there are 3 cases:
+		*) The node to be deleted can be a leaf
+		*) The node to be deleted can be a linear branch, having only one desendant.
+		*) The node to be deleted can be non-linear branch, have multiple desendants.
+
+	
+	When we delete a node that has 2 desendants to be confirmed, the following solutions.
+		1) Non-Practical Solution:
+			*)Traverse to left side of the root node
+			*)Find the maximum node on that branch
+			*)shift the data on to the root node
+			*)Delete the Node that was found maximum on that branch
+		2) Practical Solution:
+			Either works on 2 practical solutions
+			*) Fuck(Delete) the Node and all its branches(subtrees)	
+			*) Return the null pointer if this shit(Node with 2 desendants) happens.
+	
+AVL Tree:
+	The AVL Tree is the self balancing tree. The leftNode and the rightNode of any root Node is T**L and T**R. 
+	The Rule of AVL Tree states that the height of any node w.r.t subtrees must be differentiated to at most 1. i-e(-1, 0, 1)
+	
+	The difference between the leftNode and rightNode is the balancing factor of that rootNode
+	
+			h(rootNode) = | h(T**L) - h(T**R) | that shound be <= 1
+
+	
+	For the tree to become the AVL, the height range of everyNode within the tree must meet the following formula mentioned above
+
+	Why make the tree a balance tree?
+		BST has this ability to search in discrete manner of the time complexity in O(log2 n), but we do last this factor when the height of the 
+		tree increases in linear manner O(n), then the search becomes on any branch increased in linear manner can have the search at o(n) time that 
+		can reduce its efficiency. So, to overcome this problem, we ensure the status of the tree to be AVL.
+	
+	 
+	How to maintain the status of the tree to be AVL?
+		We maintain the status of the Tree to AVL, by applying rotations on the tree. We apply the rotation so that if any branch has this 
+		linear pattern in it could be converted to that of the log n pattern (AVL pattern) in the tree. In this way our search could be efficient
+		enough, all the way through finding the values in all the tree.
+	
+	
+	Rotations in AVL Tree:
+		We rotate that node that is unbalanced (whose balanced factor is increased out of range), due to that very node inserted, the status of the 
+		whole AVL tree is changed to non-AVL Tree. By applying the rotation on that very branch where the node is inserted, the time complexity 
+		of the tree is now O(log2 n), else it was O(n) without applying the rotation.
+		
+		When a node is inserted, the balancing factor of that node and on that branch where that node is should be checked uptill the root Node.
+
+	Types of the Rotations:
+		1) LL [Left to Left Rotation]
+		2) RR [Right to Right Roataion]
+		3) LR [Left to Right Rotation]
+		4) RL [Right to Left Rotation]
+	
+		
+		LL:-> Left Subtree of the Left Subtree of the root Node.
+		      Let the root of the node whose B-F is unbalanced be A, and the next Node after A, let it be B.
+		      Make B the parent of the A and the node inserted. 
+		
+		RR:-> Right Subtree of the Right Subtree of the root Node.
+		      Let the root of the node whose B-F is unbalanced be A, and the next Node after A, let it be B.
+		      Make B the parent of the A and the node inserted.
+		
+		LR:-> Right Subtree of the Left Subtree of the root Node.
+			Let the root of the node whose B-F is unbalanced be A, the next Node after A at left of it be B, and the right Node of B, be C.
+			Make C the parent of B and A respectively.
+		
+		RL:-> Left Subtree of the Right Subtree of the root Node.
+			Let the root of the node whose B-F is the unbalanced be A, the next Node after A at right of it be B, and the left Node of B, be C.
+			Make C be the parent of B and A respectively.
+	
