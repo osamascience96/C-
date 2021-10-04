@@ -1,6 +1,6 @@
 # The Population Growth of Lamas Program in C++
 
-#Please Review the Program
+# Please Review the Program
 
-![Alt text](Question.png?raw=true "Question Population Growth")
-![Alt text](TODO.png?raw=true "TODO in the Program")
+![Question Image](Question.png?raw=true "Question Population Growth")
+![Todo Image](TODO.png?raw=true "TODO in the Program")
