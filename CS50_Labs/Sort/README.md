@@ -1,5 +1,5 @@
 # We have 3 basic Sorting Algorithms
-1. Selection Sort
+1. Selection Sort(Done)
 2. Merge Sort
 3. Bubble Sort
 
