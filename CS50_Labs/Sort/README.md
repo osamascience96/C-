@@ -1,7 +1,7 @@
 # We have 3 basic Sorting Algorithms
 1. Selection Sort(Done)
 2. Merge Sort
-3. Bubble Sort
+3. Bubble Sort(Done)
 
 # TODO
 1. Understand each Sorting Algorithm.
@@ -12,3 +12,5 @@
 6. Make another file that contains their resultant runtime of a particular file against the algorithm applied to that file.
 
 
+# NOTES:
+  Analyze the data from the file in Algorithm.txt that the Selection Sort Runtime is better than the Bubble Sort

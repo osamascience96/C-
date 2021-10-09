@@ -3,7 +3,7 @@
 #include <string>
 #include <time.h>
 
-const char *myAbsolutePath = "C://Users//osama//OneDrive//Documents//GitHub//C-//CS50_Labs//Sort//";
+const char* myAbsolutePath = "C://Users//osama//OneDrive//Documents//GitHub//C-//CS50_Labs//Sort//";
 double algorithmTime = 0;
 
 /// <summary>
@@ -13,7 +13,7 @@ double algorithmTime = 0;
 /// <param name="size">number of elements in the file</param>
 /// <returns>returns the integer array of the number from the file</returns>
 int* GetFiguresArrayByFile(std::string fileName, int size) {
-	int *figuresArray = new int[size];
+	int* figuresArray = new int[size];
 
 	std::string fullFilePath = myAbsolutePath + fileName;
 	std::ifstream inputStream;
@@ -47,6 +47,7 @@ void Swap(int* memadd1, int* memadd2) {
 
 /// <summary>
 /// Selection Sort Alogrithm that sorts the given integer array 
+/// Run Time is O(n**2)
 /// </summary>
 /// <param name="figuresArray">takes the array in param</param>
 /// <param name="length">takes in the length</param>
@@ -54,7 +55,7 @@ void Swap(int* memadd1, int* memadd2) {
 int* ApplySelectionSortAlgorithm(int* figuresArray, int length) {
 	std::clock_t starttime, endtime;
 	starttime = clock();
-	for (int i = 0; i < length ; i++) {
+	for (int i = 0; i < length; i++) {
 		int smallIndex = i;
 		for (int j = i; j < length; j++) {
 			if (figuresArray[j] < figuresArray[smallIndex]) {
@@ -67,6 +68,31 @@ int* ApplySelectionSortAlgorithm(int* figuresArray, int length) {
 	}
 	endtime = clock();
 	algorithmTime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
+	return figuresArray;
+}
+
+/// <summary>
+/// Bubble Sort Algorithm that sorts the given integer array
+/// Run Time is O(n**2)
+/// </summary>
+/// <param name="figuresArray">takes the array in param</param>
+/// <param name="length">takes in the length</param>
+/// <returns>return the sorted array</returns>
+int* ApplyBubbleSortAlgorithm(int* figuresArray, int length) {
+	for (int i = 0; i <= length; i++) {
+		bool swapped = false;
+		for (int j = 0; j < length - 1; j++) {
+			if (figuresArray[j] > figuresArray[j + 1]) {
+				swapped = true;
+				Swap(&figuresArray[j], &figuresArray[j + 1]);
+			}
+		}
+
+		if (swapped == false) {
+			break;
+		}
+	}
+
 	return figuresArray;
 }
 
@@ -109,22 +135,40 @@ void StoreAlgorithmTime(std::string algorithmName, std::string againstfilename) 
 }
 
 int main() {
-	int lengthOfFile = 5000;
+	// init all the figuresArray of the Files
+	int* figuresArray5000 = GetFiguresArrayByFile((char*)"random5000.txt", 5000);
+	int* figuresArray10000 = GetFiguresArrayByFile((char*)"random10000.txt", 10000);
+	int* figuresArray50000 = GetFiguresArrayByFile((char*)"random50000.txt", 50000);
+
+	// Selection Sort
 	// Apply Selection Sort to the 5000 Random Files
-	int *figuresArray = GetFiguresArrayByFile((char *)"random5000.txt", lengthOfFile);
-	figuresArray = ApplySelectionSortAlgorithm(figuresArray, lengthOfFile);
-	StoreSortedFile(figuresArray, lengthOfFile, "Selection Sort");
+	figuresArray5000 = ApplySelectionSortAlgorithm(figuresArray5000, 5000);
+	StoreSortedFile(figuresArray5000, 5000, "Selection Sort");
 	StoreAlgorithmTime("Selection Sort", "random5000");
 	// Apply Selection Sort to the 10000 Random Files
-	lengthOfFile = 10000;
-	figuresArray = GetFiguresArrayByFile((char*)"random10000.txt", lengthOfFile);
-	figuresArray = ApplySelectionSortAlgorithm(figuresArray, lengthOfFile);
-	StoreSortedFile(figuresArray, lengthOfFile, "Selection Sort");
+	figuresArray10000 = ApplySelectionSortAlgorithm(figuresArray10000, 10000);
+	StoreSortedFile(figuresArray10000, 10000, "Selection Sort");
 	StoreAlgorithmTime("Selection Sort", "random10000");
 	// Apply Selection Sort to the 50000 Random Files
-	lengthOfFile = 50000;
-	figuresArray = GetFiguresArrayByFile((char*)"random50000.txt", lengthOfFile);
-	figuresArray = ApplySelectionSortAlgorithm(figuresArray, lengthOfFile);
-	StoreSortedFile(figuresArray, lengthOfFile, "Selection Sort");
+	figuresArray50000 = ApplySelectionSortAlgorithm(figuresArray50000, 50000);
+	StoreSortedFile(figuresArray50000, 50000, "Selection Sort");
 	StoreAlgorithmTime("Selection Sort", "random50000");
+
+	std::cout << "Selection Sort Done" << std::endl;
+
+	// Bubble Sort
+	// apply the bubble sort to the 5000 Random Files
+	figuresArray5000 = ApplyBubbleSortAlgorithm(figuresArray5000, 5000);
+	StoreSortedFile(figuresArray5000, 5000, "Bubble Sort");
+	StoreAlgorithmTime("Bubble Sort", "random5000");
+	// Apply Bubble Sort to the 10000 Random Files
+	figuresArray10000 = ApplyBubbleSortAlgorithm(figuresArray10000, 10000);
+	StoreSortedFile(figuresArray10000, 10000, "Bubble Sort");
+	StoreAlgorithmTime("Bubble Sort", "random10000");
+	// Apply Bubble Sort to the 50000 Random Files
+	figuresArray50000 = ApplyBubbleSortAlgorithm(figuresArray50000, 50000);
+	StoreSortedFile(figuresArray50000, 50000, "Bubble Sort");
+	StoreAlgorithmTime("Bubble Sort", "random50000");
+
+	std::cout << "Bubble Sort Done" << std::endl;
 }

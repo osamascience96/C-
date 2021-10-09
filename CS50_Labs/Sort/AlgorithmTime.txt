@@ -1,3 +1,6 @@
-The time took by Selection Sort to sort the numbers in file in random5000 is 0.055000 seconds.
-The time took by Selection Sort to sort the numbers in file in random10000 is 0.171000 seconds.
-The time took by Selection Sort to sort the numbers in file in random50000 is 4.031000 seconds.
+The time took by Selection Sort to sort the numbers in file in random5000 is 0.051000 seconds.
+The time took by Selection Sort to sort the numbers in file in random10000 is 0.282000 seconds.
+The time took by Selection Sort to sort the numbers in file in random50000 is 4.857000 seconds.
+The time took by Bubble Sort to sort the numbers in file in random5000 is 4.857000 seconds.
+The time took by Bubble Sort to sort the numbers in file in random10000 is 4.857000 seconds.
+The time took by Bubble Sort to sort the numbers in file in random50000 is 4.857000 seconds.
